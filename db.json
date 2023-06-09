@@ -36,5 +36,17 @@
             "id": 3,
             "name": "Raj Shah"
         }
+    ],
+    "users": [
+        {
+            "id": "shiv@gmail.com",
+            "channelId": "shivCode"
+        }
+    ],
+    "channels": [
+        {
+            "id": "shivCode",
+            "courses": ["React", "Angular", "Node"]
+        }
     ]
 }
