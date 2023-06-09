@@ -1,27 +1,38 @@
 
-// import { useState } from "react";
+
+
+import { useState } from "react";
 
 import { useSuperHeroesData } from "../hooks/useSuperHeroesData";
-import {Link} from "react-router-dom"
 
 
-const RQSuperHeroesPage = () => {
 
-    // const [interval, setInterval] = useState(5000);
+const MySuperHeroesPage = () => {
+
+    const [IsQueryEnabled, setIsQueryEnabled] = useState(true);
 
     const onSuccess = (data) => {
         // if (data.data.length >=4 && interval === 3000) {
         //     setInterval(false)
         // }
         // console.log("Perform side effects after data fetching like navigating to another page or opening a modal", data)
+        if (data) {
+            setIsQueryEnabled(false)
+        }
     }
     const onError = (error) => {
         // setInterval(false)
         // console.log("Perform side effects after encountering error", error)
+        
     }
+    // const enabled = (enable) => {
+    //     enable = false
+    //     // setInterval(false)
+    //     // console.log("Perform side effects after encountering error", error)
+    // }
 
   // useQuery(queryKey, promise, configuration to tweak its behaviour)
-  const { isLoading, data, isError, error, isFetching, refetch } = useSuperHeroesData(onSuccess, onError)
+  const { isLoading, data, isError, error, isFetching, refetch } = useSuperHeroesData(onSuccess, onError, IsQueryEnabled)
   
 
   console.log({ isLoading, isFetching });
@@ -36,13 +47,11 @@ const RQSuperHeroesPage = () => {
 
   return (
     <>
-      <h2> RQ Super Heroes Page</h2>
-      {/* onclick of te button the data from api will be displayed */}
+      <h2> MY Super Heroes Page</h2>
+      {/* onclick of the button the data from api will be displayed */}
       <button onClick={refetch}>Fetch Heroes</button>
       {data?.data.map((hero) => (
-        <div key={hero.id}>
-            <Link to={`/rq-super-heroes/${hero.id}`}>{hero.name}</Link>
-        </div>
+        <div key={hero.id}>{hero.name}</div>
       ))}
 
       {/* {
@@ -54,4 +63,4 @@ const RQSuperHeroesPage = () => {
   );
 };
 
-export default RQSuperHeroesPage;
+export default MySuperHeroesPage;

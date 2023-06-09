@@ -15,5 +15,26 @@
             "name": "Wonder Woman 1",
             "alterEgo": "Princess Diana"
         }
+        ,
+        {
+            "id": 4,
+            "name": "Spider Man",
+            "alterEgo": "My Spider Man 2"
+        }
+    ],
+
+    "friends": [
+        {
+            "id": 1,
+            "name": "Bob Chad"
+        },
+        {
+            "id": 2,
+            "name": "John Doy"
+        },
+        {
+            "id": 3,
+            "name": "Raj Shah"
+        }
     ]
 }
