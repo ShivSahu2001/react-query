@@ -63,20 +63,46 @@ export const useAddSuperHeroData = () => {
     // in useMutaion hook we don't need to pass queryKey necassrily
     const queryClient = useQueryClient() 
     return useMutation(addSuperHero, {
-        onSuccess: (data) => {
+        // onSuccess: (data) => {
             // by doing these you don't want to again refetch by clicking Button it will automatically added as soon as addHero button is clicked.
 
             // queryClient.invalidateQueries('super-heroes')
 
             // setQueryData is used to update the mutate response by doing so we reducing the network request
+            // queryClient.setQueryData('super-heroes', (oldQueryData) => {
+            //     return {
+            //         ...oldQueryData,
+            //         // In data : we will spread out the oldQueryData and mutation respnose that is newData --> data.data
+            //         data: [...oldQueryData.data, data.data]
+            //     }
+            // })
+
+        // },
+        onMutate: async(newHero) => {
+           await queryClient.cancelQueries('super-heroes')
+           const previousHeroData = queryClient.getQueryData('super-heroes')
             queryClient.setQueryData('super-heroes', (oldQueryData) => {
                 return {
                     ...oldQueryData,
                     // In data : we will spread out the oldQueryData and mutation respnose that is newData --> data.data
-                    data: [...oldQueryData.data, data.data]
+                    data: [...oldQueryData.data,
+                    {id: oldQueryData?.data?.length + 1, ...newHero}
+                ],
                 }
             })
+            return {
+                // this will use to rollback if mutation is prone to errors
+                previousHeroData,
+            }
 
+        },
+        onError: (_error, _hero, context) => {
+            // if error then rollback to previousHeroData
+            queryClient.setQueryData('super-heroes', context.previousHeroData)
+        },
+        // This will run either on success or onError
+        onSettled: () => {
+            queryClient.invalidateQueries('super-heroes')
         }
     })
 
