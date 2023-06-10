@@ -1,86 +1,113 @@
 {
-    "superheroes": [
-        {
-            "id": 1,
-            "name": "Batman dark night",
-            "alterEgo": "Bruce Wayne"
-        },
-        {
-            "id": 2,
-            "name": "Superman",
-            "alterEgo": "Clark kent"
-        },
-        {
-            "id": 3,
-            "name": "Wonder Woman 1",
-            "alterEgo": "Princess Diana"
-        }
-        ,
-        {
-            "id": 4,
-            "name": "Spider Man",
-            "alterEgo": "My Spider Man 2"
-        }
-    ],
-
-    "friends": [
-        {
-            "id": 1,
-            "name": "Bob Chad"
-        },
-        {
-            "id": 2,
-            "name": "John Doy"
-        },
-        {
-            "id": 3,
-            "name": "Raj Shah"
-        }
-    ],
-    "users": [
-        {
-            "id": "shiv@gmail.com",
-            "channelId": "shivCode"
-        }
-    ],
-    "channels": [
-        {
-            "id": "shivCode",
-            "courses": ["React", "Angular", "Node"]
-        }
-    ],
-    "colors": [
-        {
-            "id": 1,
-            "label": "red"
-        },
-        {
-            "id": 2,
-            "label": "green"
-        },
-        {
-            "id": 3,
-            "label": "blue"
-        },
-        {
-            "id": 4,
-            "label": "orange"
-        },
-        {
-            "id": 5,
-            "label": "yellow"
-        },
-        {
-            "id": 6,
-            "label": "pink"
-        },
-        {
-            "id": 7,
-            "label": "black"
-        },
-        {
-            "id": 8,
-            "label": "brown"
-        }
-    ]
+  "superheroes": [
+    {
+      "id": 1,
+      "name": "Batman dark night",
+      "alterEgo": "Bruce Wayne"
+    },
+    {
+      "id": 2,
+      "name": "Superman",
+      "alterEgo": "Clark kent"
+    },
+    {
+      "id": 3,
+      "name": "Wonder Woman 1",
+      "alterEgo": "Princess Diana"
+    },
+    {
+      "id": 4,
+      "name": "Spider Man",
+      "alterEgo": "My Spider Man 2"
+    },
+    {
+      "name": "The Flash",
+      "alterEgo": "Barry Allen",
+      "id": 5
+    },
+    {
+      "name": "The Avengers",
+      "alterEgo": "Avengers Battle",
+      "id": 6
+    },
+    {
+      "name": "Shazam",
+      "alterEgo": "Billy Batson",
+      "id": 7
+    },
+    {
+      "name": "Green Arrow",
+      "alterEgo": "Oliver Queen",
+      "id": 8
+    },
+    {
+      "name": "CatWoman",
+      "alterEgo": "Selina Kyle",
+      "id": 9
+    }
+  ],
+  "friends": [
+    {
+      "id": 1,
+      "name": "Bob Chad"
+    },
+    {
+      "id": 2,
+      "name": "John Doy"
+    },
+    {
+      "id": 3,
+      "name": "Raj Shah"
+    }
+  ],
+  "users": [
+    {
+      "id": "shiv@gmail.com",
+      "channelId": "shivCode"
+    }
+  ],
+  "channels": [
+    {
+      "id": "shivCode",
+      "courses": [
+        "React",
+        "Angular",
+        "Node"
+      ]
+    }
+  ],
+  "colors": [
+    {
+      "id": 1,
+      "label": "red"
+    },
+    {
+      "id": 2,
+      "label": "green"
+    },
+    {
+      "id": 3,
+      "label": "blue"
+    },
+    {
+      "id": 4,
+      "label": "orange"
+    },
+    {
+      "id": 5,
+      "label": "yellow"
+    },
+    {
+      "id": 6,
+      "label": "pink"
+    },
+    {
+      "id": 7,
+      "label": "black"
+    },
+    {
+      "id": 8,
+      "label": "brown"
+    }
+  ]
 }
