@@ -17,6 +17,8 @@ const DependentQueriesPage = ({email}) => {
     const channelId = user?.data.channelId
     
     // third parameter enabled is passed because when the channelId will get from the user response then only hit this query means hit (channelId)
+
+    // !! -->  https://stackoverflow.com/questions/784929/what-is-the-not-not-operator-in-javascript
     useQuery(['courses', channelId], () => fetchCoursesByChannelId(channelId), {
         enabled: !!channelId,
     })
