@@ -48,5 +48,39 @@
             "id": "shivCode",
             "courses": ["React", "Angular", "Node"]
         }
+    ],
+    "colors": [
+        {
+            "id": 1,
+            "label": "red"
+        },
+        {
+            "id": 2,
+            "label": "green"
+        },
+        {
+            "id": 3,
+            "label": "blue"
+        },
+        {
+            "id": 4,
+            "label": "orange"
+        },
+        {
+            "id": 5,
+            "label": "yellow"
+        },
+        {
+            "id": 6,
+            "label": "pink"
+        },
+        {
+            "id": 7,
+            "label": "black"
+        },
+        {
+            "id": 8,
+            "label": "brown"
+        }
     ]
 }
